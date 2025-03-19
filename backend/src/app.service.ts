@@ -1,9 +1,9 @@
-import { portifolio } from '@core';
+import { Id } from '@core';
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class AppService {
   getHello(): string {
-    return 'Projeto ' + portifolio;
+    return 'Projeto ' + Id.gerar();
   }
 }
