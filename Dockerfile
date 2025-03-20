@@ -28,3 +28,5 @@ COPY --from=builder --chown=node:node /home/node/backend/node_modules/ ./node_mo
 COPY --from=builder --chown=node:node /home/node/backend/dist/ ./dist/
 
 CMD ["node", "dist/backend/src/main.js"]
+
+EXPOSE 5000
