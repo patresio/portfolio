@@ -7,7 +7,7 @@ USER node
 WORKDIR /home/node/backend
 
 COPY package*.json ./
-RUN npm ci
+RUN npm ic
 
 WORKDIR /home/node
 COPY --chown=node:node . .
