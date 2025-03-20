@@ -6,8 +6,9 @@ USER node
 
 WORKDIR /home/node/backend
 
-COPY package*.json ./
-RUN npm i
+COPY package.json .
+COPY package-lock.json .
+RUN npm clean-install
 
 WORKDIR /home/node
 COPY --chown=node:node . .
