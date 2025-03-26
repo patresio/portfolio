@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx concurrently \"cd backend && npm run start:dev\" \"cd frontend && npm run dev\""
+    "dev": "npx concurrently \"cd backend && npm run start:dev\" \"cd frontend && npm run dev\"",
+    "start": "npx concurrently \"cd backend && npm run start:prod\" \"cd frontend && npm start\""
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,8 @@
   "homepage": "https://github.com/patresio/portfolio#readme",
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.16"
+  },
+  "dependencies": {
+    "concurrently": "^9.1.2"
   }
 }
