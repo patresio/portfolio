@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/patresio/portfolio/issues"
   },
-  "homepage": "https://github.com/patresio/portfolio#readme"
+  "homepage": "https://github.com/patresio/portfolio#readme",
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.16"
+  }
 }

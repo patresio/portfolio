@@ -3,6 +3,7 @@ import Image from 'next/image'
 
 export interface TecnologiaProps {
 	lista: Tecnologia[]
+	tamanhoMenor?: boolean
 }
 
 const Tecnologias = (props: TecnologiaProps) => {
@@ -13,7 +14,11 @@ const Tecnologias = (props: TecnologiaProps) => {
 					key={tecnologia.id}
 					className="flex flex-col items-center gap-1"
 				>
-					<span className="relative w-11 h-11 sm:w-16 sm:h-16 rounded-xl overflow-hidden">
+					<span
+						className={`relative w-11 h-11 rounded-xl overflow-hidden ${
+							!props.tamanhoMenor && 'sm:w-16 sm:h-16'
+						}`}
+					>
 						<Image
 							src={tecnologia.imagem}
 							alt={tecnologia.nome}
